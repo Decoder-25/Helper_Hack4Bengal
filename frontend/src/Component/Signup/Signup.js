@@ -46,7 +46,7 @@ const Signup = (props) => {
     firstName: "",
     lastName: "",
     AadharNumber: "",
-    DOB: "",
+    age: "",
     Gender: "male",
     MobileNo: "",
     Religion: "",
@@ -339,9 +339,9 @@ const Signup = (props) => {
             <TextField
               label="Age"
               variant="outlined"
-              value={signupDetails.DOB}
+              value={signupDetails.age}
               onChange={(event) => {
-                handleInput("DOB", event.target.value);
+                handleInput("age", event.target.value);
               }}
               fullWidth
             >
