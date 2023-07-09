@@ -921,7 +921,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/v1/auth/register", {
+      const response = await fetch("/api/v1/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -956,10 +956,11 @@ const Signup = () => {
         console.log("User registered successfully:", data);
       } else {
         const errorData = await response.json();
-
+        window.alert("Invalid Registration")
         console.log("Signup error:", errorData);
       }
     } catch (error) {
+      window.alert("Invalid Registration uyiu")
       console.log("Signup error:", error);
     }
   };
