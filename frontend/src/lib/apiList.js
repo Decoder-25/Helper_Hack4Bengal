@@ -1,4 +1,4 @@
-export const server = "http://localhost:8080";
+export const server = "http://localhost:8000";
 
 const apiList = {
   login: `${server}/auth/login`,

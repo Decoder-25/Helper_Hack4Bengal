@@ -471,11 +471,11 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value={0}>fresher</MenuItem>
-              <MenuItem value={1}>1-5 yrs</MenuItem>
-              <MenuItem value={2}>5-10 yrs</MenuItem>
-              <MenuItem value={3}>10-15 yrs</MenuItem>
-              <MenuItem value={4}>over 15 yrs</MenuItem>
+              <MenuItem value="fresher">fresher</MenuItem>
+              <MenuItem value="1-5 yrs">1-5 yrs</MenuItem>
+              <MenuItem value="5-10 yrs">5-10 yrs</MenuItem>
+              <MenuItem value="10-15 yrs">10-15 yrs</MenuItem>
+              <MenuItem value="over 15 yrs">over 15 yrs</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -501,9 +501,9 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value={0}>within 10 days</MenuItem>
-              <MenuItem value={1}>within 20 days</MenuItem>
-              <MenuItem value={2}>from next month</MenuItem>
+              <MenuItem value="within 10 days">within 10 days</MenuItem>
+              <MenuItem value="within 20 days">within 20 days</MenuItem>
+              <MenuItem value="from next month">from next month</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -517,11 +517,11 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value={0}>below matriculation</MenuItem>
-              <MenuItem value={1}>matriculation</MenuItem>
-              <MenuItem value={2}>higher secondary</MenuItem>
-              <MenuItem value={3}>graduate</MenuItem>
-              <MenuItem value={3}>post-graduate</MenuItem>
+              <MenuItem value="below matriculation">below matriculation</MenuItem>
+              <MenuItem value="matriculation">matriculation</MenuItem>
+              <MenuItem value="higher secondary">higher secondary</MenuItem>
+              <MenuItem value="graduate">graduate</MenuItem>
+              <MenuItem value="post-graduate">post-graduate</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
