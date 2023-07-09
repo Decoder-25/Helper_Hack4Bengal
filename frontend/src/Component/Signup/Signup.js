@@ -260,11 +260,11 @@ const Signup = (props) => {
   // loggedin ? (
   //   <Navigate to="/" />
   // ) : (
-    <Paper elevation={3} className={classes.body} style={styles1}>
-      <Grid container direction="column" spacing={4} alignItems="center" >
-    // loggedin ? (
-    //   <Navigate to="/" />
-    // ) : (
+    // <Paper elevation={3} className={classes.body} style={styles1}>
+    //   <Grid container direction="column" spacing={4} alignItems="center" >
+    // // loggedin ? (
+    // //   <Navigate to="/" />
+    // // ) : (
     <Paper elevation={3} className={classes.body}>
       <Grid container direction="column" spacing={4} alignItems="center">
         <Grid item>
