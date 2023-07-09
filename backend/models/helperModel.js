@@ -85,7 +85,7 @@ const helperSchema = new mongoose.Schema(
     },
     jobExperience: {
       type: String,
-      enum: ["fresher", "1-5 yrs", "5-10 yrs", "10-15 yrs", "over 15 yrs"],
+      enum: ["fresher", "1-5 yrs", "6-10 yrs", "11-15 yrs", "over 15 yrs"],
       default: "fresher",
     },
     jobLocation: {
