@@ -358,8 +358,9 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value="male">Male</MenuItem>
-              <MenuItem value="No">Female</MenuItem>
+              <MenuItem value="Yes">Married</MenuItem>
+              <MenuItem value="No">Unmarried</MenuItem>
+              <MenuItem value="other">Other</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -373,9 +374,8 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value="Yes">Married</MenuItem>
-              <MenuItem value="No">Unmarried</MenuItem>
-              <MenuItem value="other">Other</MenuItem>
+              <MenuItem value="yes">Yes</MenuItem>
+              <MenuItem value="No">No</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -439,7 +439,7 @@ const Signup = (props) => {
           <Grid item>
             <TextField
               select
-              label="Gender"
+              label="Marital Status"
               variant="outlined"
               value={signupDetails.MaritalStatus}
               onChange={(event) => {
@@ -486,9 +486,11 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value={0}>within 10 days</MenuItem>
-              <MenuItem value={1}>within 20 days</MenuItem>
-              <MenuItem value={2}>from next month</MenuItem>
+              <MenuItem value={0}>fresher</MenuItem>
+              <MenuItem value={1}>1-5 yrs</MenuItem>
+              <MenuItem value={2}>5-10 yrs</MenuItem>
+              <MenuItem value={3}>10-15 yrs</MenuItem>
+              <MenuItem value={4}>over 15 yrs</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -514,11 +516,9 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-              <MenuItem value={0}>fresher</MenuItem>
-              <MenuItem value={1}>1-5 yrs</MenuItem>
-              <MenuItem value={2}>5-10 yrs</MenuItem>
-              <MenuItem value={3}>10-15 yrs</MenuItem>
-              <MenuItem value={4}>over 15 yrs</MenuItem>
+              <MenuItem value={0}>within 10 days</MenuItem>
+              <MenuItem value={1}>within 20 days</MenuItem>
+              <MenuItem value={2}>from next month</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
