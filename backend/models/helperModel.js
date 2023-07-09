@@ -37,8 +37,13 @@ const helperSchema = new mongoose.Schema(
       default: "male",
     },
     MobileNo: {
-      type: Number,
-      required: true,
+      type: String,
+      validate: {
+        validator: function (v) {
+          return /\+\d{1,4}-\d{10}/.test(v);
+        },
+        message: "{VALUE} is not a valid phone number!",
+      },
     },
     Religion: {
       type: String,
