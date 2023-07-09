@@ -1,5 +1,5 @@
 //error middleware || NEXT function
-
+//errorMiddleware.js
 const errorMiddleware = (err, req, res, next) => {
   console.log(err);
   const defaultErrors = {
