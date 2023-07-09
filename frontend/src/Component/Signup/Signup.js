@@ -474,7 +474,6 @@ const Signup = (props) => {
                 className="box"
                 onChange={(phone) => setPhone(phone)}
               />
-<<<<<<< HEAD
           </Grid>
           <Grid item>
             <TextField
@@ -653,7 +652,6 @@ const Signup = (props) => {
             >
             </TextField>
           </Grid>
-=======
             </Grid>
             <Grid item>
               <TextField
@@ -800,7 +798,6 @@ const Signup = (props) => {
                 fullWidth
               ></TextField>
             </Grid>
->>>>>>> 493e232cf7198f6b767aaf2fec0bf3d93a4694d2
           </>
         ) : (
           <>
