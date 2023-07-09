@@ -40,13 +40,13 @@ function App(
       <SetPopupContext.Provider value={{ popup, setPopup }}>
       <Grid container direction="column">
         <Grid item xs>
-          <Navbar />
+          {/* <Navbar /> */}
         </Grid>
         <Grid item className={classes.body}>
         <Routes>
-          <Route exact path="/" Component={Welcome} />
-          <Route exact path="/login" Component={Login} />
-          <Route exact path="/signup" Component={Signup} />
+          {/* <Route exact path="/" Component={Welcome} /> */}
+          {/* <Route exact path="/login" Component={Login} /> */}
+          <Route exact path="/" Component={Signup} />
           {/* <Route exact  path="/" Component={Profile_ami}/> */}
           {/* <Route exact path="/" Component={Profile_helper}/> */}
           <Route />
