@@ -618,17 +618,14 @@ const Signup = (props) => {
               }}
               fullWidth
             >
-<<<<<<< HEAD
               <MenuItem value="within 10 days">within 10 days</MenuItem>
               <MenuItem value="within 20 days">within 20 days</MenuItem>
               <MenuItem value="from next month">from next month</MenuItem>
-=======
               <MenuItem value={0}>fresher</MenuItem>
               <MenuItem value={1}>1-5 yrs</MenuItem>
               <MenuItem value={2}>5-10 yrs</MenuItem>
               <MenuItem value={3}>10-15 yrs</MenuItem>
               <MenuItem value={4}>over 15 yrs</MenuItem>
->>>>>>> 7c64d83aceb5575d15717c2badb8bf65589eed16
             </TextField>
           </Grid>
           <Grid item>
