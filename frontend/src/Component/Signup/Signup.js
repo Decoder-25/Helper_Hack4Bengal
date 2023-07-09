@@ -354,7 +354,7 @@ const Signup = (props) => {
               variant="outlined"
               value={signupDetails.MaritalStatus}
               onChange={(event) => {
-                handleInput("maritalStatus", event.target.value);
+                handleInput("MaritalStatus", event.target.value);
               }}
               fullWidth
             >
@@ -368,14 +368,15 @@ const Signup = (props) => {
               select
               label="Gender"
               variant="outlined"
-              value={signupDetails.MaritalStatus}
+              value={signupDetails.Gender}
               onChange={(event) => {
-                handleInput("maritalStatus", event.target.value);
+                handleInput("Gender", event.target.value);
               }}
               fullWidth
             >
-              <MenuItem value="yes">Yes</MenuItem>
-              <MenuItem value="No">No</MenuItem>
+              <MenuItem value="male">male</MenuItem>
+              <MenuItem value="female">female</MenuItem>
+              <MenuItem value="other">other</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
@@ -434,22 +435,6 @@ const Signup = (props) => {
             >
               <MenuItem value="Yes">Yes</MenuItem>
               <MenuItem value="No">No</MenuItem>
-            </TextField>
-          </Grid>
-          <Grid item>
-            <TextField
-              select
-              label="Marital Status"
-              variant="outlined"
-              value={signupDetails.MaritalStatus}
-              onChange={(event) => {
-                handleInput("maritalStatus", event.target.value);
-              }}
-              fullWidth
-            >
-              <MenuItem value="Yes">Married</MenuItem>
-              <MenuItem value="No">Unmarried</MenuItem>
-              <MenuItem value="other">Other</MenuItem>
             </TextField>
           </Grid>
           <Grid item>
