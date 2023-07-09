@@ -29,18 +29,18 @@ import {
     };
   
     return (
-      <AppBar position="fixed" style={{backgroundColor: 'green' }}>
+      <AppBar position="fixed" style={{backgroundColor: 'rgb(2, 54, 2)' }}>
         <Toolbar>
           <Typography variant="h5" className={classes.title} onClick={() => handleClick("/")}>
-            HELPER
+          <b>HELPER</b>
           </Typography>
           
         <>
           <Button color="inherit" onClick={() => handleClick("/login")}>
-            Login
+          <b>Login</b>
           </Button>
           <Button color="inherit" onClick={() => handleClick("/signup")}>
-            Signup
+          <b>Signup</b>
           </Button>
         </>
         </Toolbar>
