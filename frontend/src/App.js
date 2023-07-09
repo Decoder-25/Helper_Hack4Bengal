@@ -22,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "64px",
     boxSizing: "border-box",
     width: "100%",
-    backgroundColor: '#acfcb0',
   },
 }));
 
-function App() {
+function App(
+) {
   const classes = useStyles();
   const [popup, setPopup] = useState({
     open: false,

@@ -93,7 +93,13 @@ const Signup = (props) => {
       error: false,
       message: "",
     },
-    name: {
+    firstName: {
+      untouched: true,
+      required: true,
+      error: false,
+      message: "",
+    },
+    lastName: {
       untouched: true,
       required: true,
       error: false,
@@ -106,10 +112,13 @@ const Signup = (props) => {
       ...signupDetails,
       [key]: value,
     });
+    // console.log(setSignupDetails)
   };
 
+
+
   const handleInputError = (key, status, message) => {
-    setInputErrorHandler({
+    setInputErrorHandler({ 
       ...inputErrorHandler,
       [key]: {
         required: true,
@@ -221,11 +230,12 @@ const Signup = (props) => {
         .then((response) => {
           localStorage.setItem("token", response.data.token);
           localStorage.setItem("type", response.data.type);
-          setLoggedin(isAuth());
+          // setLoggedin(isAuth());
+
           setPopup({
             open: true,
             severity: "success",
-            message: "Logged in successfully",
+            message: "Signup done successfully",
           });
           console.log(response);
         })
