@@ -6,6 +6,7 @@ import Navbar from "./Component/Navbar/Navbar";
 import Welcome from "./Component/Welcome/Welcome";
 import MessagePopup from "./lib/MessagePopup";
 import Signup from "./Component/Signup/Signup";
+import Login from "./Component/Login/Login";
 
 export const SetPopupContext = createContext();
 
@@ -41,6 +42,7 @@ function App() {
         <Grid item className={classes.body}>
         <Routes>
           <Route exact path="/" Component={Welcome} />
+          <Route exact path="/login" Component={Login} />
           <Route exact path="/signup" Component={Signup} />
         </Routes>
         </Grid>

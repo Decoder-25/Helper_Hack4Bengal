@@ -253,7 +253,7 @@ const Signup = (props) => {
               handleInput("type", event.target.value);
             }}
           >
-            <MenuItem value="applicant">Applicant</MenuItem>
+            <MenuItem value="applicant">Helper</MenuItem>
             <MenuItem value="recruiter">Recruiter</MenuItem>
           </TextField>
         </Grid>
