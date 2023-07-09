@@ -7,6 +7,11 @@ import "express-async-errors";
 //files import
 import connectDB from "./config/db.js";
 
+//routes
+
+import authRoutes from "./routes/authRoutes.js";
+import errorMiddleware from "./middlewares/errorMiddleware.js";
+
 //DOTENV config
 dotenv.config();
 
@@ -16,10 +21,18 @@ connectDB();
 //rest objects
 const app = express();
 
+//middelware
+app.use(express.json());
+app.use(cors());
+app.use(morgan("dev"));
+
 //routes
-app.get('/', (req,res) =>{
-    req.send("hello world!");
-});
+app.use("/api/v1/auth", authRoutes);
+
+//validation middleware
+app.use(errorMiddleware);
+
+//port
 const PORT = process.env.PORT || 8000;
 
 //listen
