@@ -4,6 +4,10 @@ import { Grid, makeStyles } from "@material-ui/core";
 
 import Navbar from "./Component/Navbar/Navbar";
 import Welcome from "./Component/Welcome/Welcome";
+import MessagePopup from "./lib/MessagePopup";
+import Signup from "./Component/Signup/Signup";
+
+export const SetPopupContext = createContext();
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -20,11 +24,16 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
+  const [popup, setPopup] = useState({
+    open: false,
+    severity: "",
+    message: "",
+  });
 
   return (
     <>
       <BrowserRouter >
-      {/* <SetPopupContext.Provider value={{ popup, setPopup }}> */}
+      <SetPopupContext.Provider value={{ popup, setPopup }}>
       <Grid container direction="column">
         <Grid item xs>
           <Navbar />
@@ -32,11 +41,21 @@ function App() {
         <Grid item className={classes.body}>
         <Routes>
           <Route exact path="/" Component={Welcome} />
+          <Route exact path="/signup" Component={Signup} />
         </Routes>
         </Grid>
         </Grid>
         
-      {/* </SetPopupContext.Provider> */}
+        <MessagePopup 
+          open={popup.open}
+          setOpen={(status) =>
+            setPopup({
+              ...popup,
+              open: status,
+            })
+          }
+        />
+      </SetPopupContext.Provider>
     </BrowserRouter>
     </>
   );
