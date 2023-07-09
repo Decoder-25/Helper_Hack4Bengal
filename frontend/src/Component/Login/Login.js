@@ -24,16 +24,18 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: ['Shadows Into Light Two', 'cursive', 'bold'].join(','),
+    color: 'rgb(2, 54, 2)',
   },
-  body: {
+  body1: {
     padding: "60px 60px",
+    // backgroundColor: '#acfcb0',
   },
   inputBox: {
     width: "300px",
   },
   submitButton: {
     width: "300px",
-    backgroundColor: "green",
+    backgroundColor: "rgb(2, 54, 2)",
     color: "white",
     '&:hover':{
       backgroundColor: "#b4fca4",
@@ -119,22 +121,24 @@ const Login = (props) => {
     }
   };
     const styles = {
-         border: '3px solid black',
+         border: '3px',
          margin: '100px auto',
          borderRadius: '25px',
 	      width: '30%',
 	      padding: '25px',
+        paddingTop: '55px',
+        paddingBottom: '70px',
         backgroundColor: "white"
     }
   return (
   // loggedin ? (
   //   <Navigate to="/login" />
   // ) : (
-    <Paper elevation={3} className={classes.body}>
-      <Grid container direction="column" spacing={4} alignItems="center">
+    <Paper elevation={3} className={classes.body1} style={styles}>
+      <Grid container direction="column" spacing={4} alignItems="center" >
         <Grid item>
-          <Typography variant="h3" component="h2">
-            Login
+          <Typography variant="h3" component="h2" className={classes.title}>
+            <b>Login</b>
           </Typography>
         </Grid>
         <Grid item>
@@ -162,7 +166,7 @@ const Login = (props) => {
             onClick={() => handleLogin()}
             className={classes.submitButton}
           >
-            Login
+            <b>Login</b>
           </Button>
         </Grid>
       </Grid>

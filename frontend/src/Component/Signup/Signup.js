@@ -13,6 +13,7 @@ import axios from "axios";
 import { Navigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
+import "./Signup.css"
 
 import PasswordInput from "../../lib/PasswordInput";
 import EmailInput from "../../lib/EmailInput";
@@ -22,6 +23,15 @@ import apiList from "../../lib/apiList";
 import isAuth from "../../lib/isAuth";
 
 const useStyles = makeStyles((theme) => ({
+  // box: {
+  //   padding: "60px 60px",
+  // },
+  title1: {
+    fontFamily: ['Shadows Into Light Two', 'cursive', 'bold'].join(','),
+    color: 'rgb(2, 54, 2)',
+    paddingBottom: '30px',
+  },
+
   body: {
     padding: "60px 60px",
   },
@@ -30,6 +40,12 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     width: "400px",
+    backgroundColor: "rgb(2, 54, 2)",
+    color: "white",
+    '&:hover':{
+    backgroundColor: "#b4fca4",
+    color: "black",
+    }
   },
 }));
 
@@ -231,15 +247,24 @@ const Signup = (props) => {
     }
   };
 
+  const styles1 = {
+    border: '3px',
+    margin: '95px auto',
+    borderRadius: '25px',
+    width: '30%',
+    padding: '55px',
+    backgroundColor: "white",
+}
+
   return (
   // loggedin ? (
   //   <Navigate to="/" />
   // ) : (
-    <Paper elevation={3} className={classes.body}>
-      <Grid container direction="column" spacing={4} alignItems="center">
+    <Paper elevation={3} className={classes.body} style={styles1}>
+      <Grid container direction="column" spacing={4} alignItems="center" >
         <Grid item>
-          <Typography variant="h3" component="h2">
-            Signup
+          <Typography variant="h3" component="h2" className={classes.title1}>
+            <b>Signup</b>
           </Typography>
         </Grid>
         <Grid item>
@@ -327,6 +352,7 @@ const Signup = (props) => {
             <TextField
               label="Adhaar Number"
               variant="outlined"
+              className="box"
               value={signupDetails.AadharNumber}
               onChange={(event) => {
                 handleInput("AadharNumber", event.target.value);
@@ -339,6 +365,7 @@ const Signup = (props) => {
             <TextField
               label="Age"
               variant="outlined"
+              className="box"
               value={signupDetails.DOB}
               onChange={(event) => {
                 handleInput("DOB", event.target.value);
@@ -352,6 +379,7 @@ const Signup = (props) => {
               select
               label="Marital Status"
               variant="outlined"
+              className="box"
               value={signupDetails.MaritalStatus}
               onChange={(event) => {
                 handleInput("maritalStatus", event.target.value);
@@ -367,6 +395,7 @@ const Signup = (props) => {
               select
               label="Gender"
               variant="outlined"
+              className="box"
               value={signupDetails.MaritalStatus}
               onChange={(event) => {
                 handleInput("maritalStatus", event.target.value);
@@ -382,6 +411,7 @@ const Signup = (props) => {
               <PhoneInput
                 country={"in"}
                 value={phone}
+                className="box"
                 onChange={(phone) => setPhone(phone)}
               />
           </Grid>
@@ -389,6 +419,7 @@ const Signup = (props) => {
             <TextField
               label="Religion"
               variant="outlined"
+              className="box"
               value={signupDetails.Religion}
               onChange={(event) => {
                 handleInput("Religion", event.target.value);
@@ -401,6 +432,7 @@ const Signup = (props) => {
             <TextField
               label="Nationality"
               variant="outlined"
+              className="box"
               value={signupDetails.Nationality}
               onChange={(event) => {
                 handleInput("Nationality", event.target.value);
@@ -413,6 +445,7 @@ const Signup = (props) => {
             <TextField
               label="Address"
               variant="outlined"
+              className="box"
               value={signupDetails.Address}
               onChange={(event) => {
                 handleInput("Address", event.target.value);
@@ -426,6 +459,7 @@ const Signup = (props) => {
               select
               label="Disability"
               variant="outlined"
+              className="box"
               value={signupDetails.Disability}
               onChange={(event) => {
                 handleInput("Disability", event.target.value);
@@ -441,6 +475,7 @@ const Signup = (props) => {
               select
               label="Gender"
               variant="outlined"
+              className="box"
               value={signupDetails.MaritalStatus}
               onChange={(event) => {
                 handleInput("maritalStatus", event.target.value);
@@ -457,6 +492,7 @@ const Signup = (props) => {
               select
               label="Sector"
               variant="outlined"
+              className="box"
               value={signupDetails.jobSector}
               onChange={(event) => {
                 handleInput("jobSector", event.target.value);
@@ -480,6 +516,7 @@ const Signup = (props) => {
               select
               label="Experience"
               variant="outlined"
+              className="box"
               value={signupDetails.jobExperience}
               onChange={(event) => {
                 handleInput("jobExperience", event.target.value);
@@ -495,6 +532,7 @@ const Signup = (props) => {
             <TextField
               label="Job Location"
               variant="outlined"
+              className="box"
               value={signupDetails.jobLocation}
               onChange={(event) => {
                 handleInput("jobLocation", event.target.value);
@@ -508,6 +546,7 @@ const Signup = (props) => {
               select
               label="Availability"
               variant="outlined"
+              className="box"
               value={signupDetails.availability}
               onChange={(event) => {
                 handleInput("availability", event.target.value);
@@ -526,6 +565,7 @@ const Signup = (props) => {
               select
               label="Education Qualification"
               variant="outlined"
+              className="box"
               value={signupDetails.educationQualification}
               onChange={(event) => {
                 handleInput("educationQualification", event.target.value);
@@ -543,6 +583,7 @@ const Signup = (props) => {
             <TextField
               label="Preferred Salary"
               variant="outlined"
+              className="box"
               value={signupDetails.expectedSalary}
               onChange={(event) => {
                 handleInput("expectedSalary", event.target.value);
@@ -594,7 +635,7 @@ const Signup = (props) => {
             }}
             className={classes.submitButton}
           >
-            Signup
+            <b>Signup</b>
           </Button>
         </Grid>
       </Grid>
