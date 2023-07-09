@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "64px",
     boxSizing: "border-box",
     width: "100%",
+    backgroundColor: '#acfcb0',
   },
 }));
 
