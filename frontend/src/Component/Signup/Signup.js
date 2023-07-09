@@ -353,7 +353,6 @@ const Signup = (props) => {
         </Grid>
         {signupDetails.type === "applicant" ? (
           <>
-<<<<<<< HEAD
           <Grid item>
             <TextField
               label="Adhaar Number"
@@ -414,7 +413,6 @@ const Signup = (props) => {
             </TextField>
           </Grid>
           <Grid item>
-=======
             <Grid item>
               <TextField
                 label="Adhaar Number"
@@ -470,7 +468,6 @@ const Signup = (props) => {
               </TextField>
             </Grid>
             <Grid item>
->>>>>>> 493e232cf7198f6b767aaf2fec0bf3d93a4694d2
               <PhoneInput
                 country={"in"}
                 value={phone}
