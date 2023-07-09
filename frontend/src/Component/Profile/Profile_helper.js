@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Profile_helper = (props) => {
   const classes = useStyles();
-  const setPopup = useContext(SetPopupContext);
+  const { popup, setPopup } = useContext(SetPopupContext);
   const [userData, setUserData] = useState();
   const [open, setOpen] = useState(false);
 

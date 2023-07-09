@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Signup = (props) => {
   const classes = useStyles();
-  const setPopup = useContext(SetPopupContext);
+  const { popup, setPopup } = useContext(SetPopupContext);
 
   const [loggedin, setLoggedin] = useState(isAuth());
 
