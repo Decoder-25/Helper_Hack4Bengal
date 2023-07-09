@@ -13,6 +13,7 @@ import axios from "axios";
 import { Navigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
+import "./Signup.css"
 
 import PasswordInput from "../../lib/PasswordInput";
 import EmailInput from "../../lib/EmailInput";
@@ -22,6 +23,15 @@ import apiList from "../../lib/apiList";
 import isAuth from "../../lib/isAuth";
 
 const useStyles = makeStyles((theme) => ({
+  // box: {
+  //   padding: "60px 60px",
+  // },
+  title1: {
+    fontFamily: ['Shadows Into Light Two', 'cursive', 'bold'].join(','),
+    color: 'rgb(2, 54, 2)',
+    paddingBottom: '30px',
+  },
+
   body: {
     padding: "60px 60px",
   },
@@ -30,6 +40,12 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     width: "400px",
+    backgroundColor: "rgb(2, 54, 2)",
+    color: "white",
+    '&:hover':{
+    backgroundColor: "#b4fca4",
+    color: "black",
+    }
   },
 }));
 
@@ -231,15 +247,29 @@ const Signup = (props) => {
     }
   };
 
+  const styles1 = {
+    border: '3px',
+    margin: '95px auto',
+    borderRadius: '25px',
+    width: '30%',
+    padding: '55px',
+    backgroundColor: "white",
+}
+
   return (
-    // loggedin ? (
-    //   <Navigate to="/" />
-    // ) : (
+  // loggedin ? (
+  //   <Navigate to="/" />
+  // ) : (
+    // <Paper elevation={3} className={classes.body} style={styles1}>
+    //   <Grid container direction="column" spacing={4} alignItems="center" >
+    // // loggedin ? (
+    // //   <Navigate to="/" />
+    // // ) : (
     <Paper elevation={3} className={classes.body}>
       <Grid container direction="column" spacing={4} alignItems="center">
         <Grid item>
-          <Typography variant="h3" component="h2">
-            Signup
+          <Typography variant="h3" component="h2" className={classes.title1}>
+            <b>Signup</b>
           </Typography>
         </Grid>
         <Grid item>
@@ -323,6 +353,66 @@ const Signup = (props) => {
         </Grid>
         {signupDetails.type === "applicant" ? (
           <>
+          <Grid item>
+            <TextField
+              label="Adhaar Number"
+              variant="outlined"
+              className="box"
+              value={signupDetails.AadharNumber}
+              onChange={(event) => {
+                handleInput("AadharNumber", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Age"
+              variant="outlined"
+              className="box"
+              value={signupDetails.DOB}
+              onChange={(event) => {
+                handleInput("DOB", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Marital Status"
+              variant="outlined"
+              className="box"
+              value={signupDetails.MaritalStatus}
+              onChange={(event) => {
+                handleInput("maritalStatus", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="male">Male</MenuItem>
+              <MenuItem value="No">Female</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Gender"
+              variant="outlined"
+              className="box"
+              value={signupDetails.MaritalStatus}
+              onChange={(event) => {
+                handleInput("maritalStatus", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="Yes">Married</MenuItem>
+              <MenuItem value="No">Unmarried</MenuItem>
+              <MenuItem value="other">Other</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
             <Grid item>
               <TextField
                 label="Adhaar Number"
@@ -381,8 +471,195 @@ const Signup = (props) => {
               <PhoneInput
                 country={"in"}
                 value={phone}
+                className="box"
                 onChange={(phone) => setPhone(phone)}
               />
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Religion"
+              variant="outlined"
+              className="box"
+              value={signupDetails.Religion}
+              onChange={(event) => {
+                handleInput("Religion", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Nationality"
+              variant="outlined"
+              className="box"
+              value={signupDetails.Nationality}
+              onChange={(event) => {
+                handleInput("Nationality", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Address"
+              variant="outlined"
+              className="box"
+              value={signupDetails.Address}
+              onChange={(event) => {
+                handleInput("Address", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Disability"
+              variant="outlined"
+              className="box"
+              value={signupDetails.Disability}
+              onChange={(event) => {
+                handleInput("Disability", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="Yes">Yes</MenuItem>
+              <MenuItem value="No">No</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Gender"
+              variant="outlined"
+              className="box"
+              value={signupDetails.MaritalStatus}
+              onChange={(event) => {
+                handleInput("maritalStatus", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="Yes">Married</MenuItem>
+              <MenuItem value="No">Unmarried</MenuItem>
+              <MenuItem value="other">Other</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Sector"
+              variant="outlined"
+              className="box"
+              value={signupDetails.jobSector}
+              onChange={(event) => {
+                handleInput("jobSector", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="househelp">househelp</MenuItem>
+              <MenuItem value="driver">driver</MenuItem>
+              <MenuItem value="gardener">gardener</MenuItem>
+              <MenuItem value="cook">cook</MenuItem>
+              <MenuItem value="nightguard">nightguard</MenuItem>
+              <MenuItem value="babysitter">babysitter</MenuItem>
+              <MenuItem value="caretaker">caretaker</MenuItem>
+              <MenuItem value="petcarer">petcarer</MenuItem>
+              <MenuItem value="hometutor">hometutor</MenuItem>
+              <MenuItem value="housekeeper">housekeeper</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Experience"
+              variant="outlined"
+              className="box"
+              value={signupDetails.jobExperience}
+              onChange={(event) => {
+                handleInput("jobExperience", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="fresher">fresher</MenuItem>
+              <MenuItem value="1-5 yrs">1-5 yrs</MenuItem>
+              <MenuItem value="5-10 yrs">5-10 yrs</MenuItem>
+              <MenuItem value="10-15 yrs">10-15 yrs</MenuItem>
+              <MenuItem value="over 15 yrs">over 15 yrs</MenuItem>
+              <MenuItem value={0}>within 10 days</MenuItem>
+              <MenuItem value={1}>within 20 days</MenuItem>
+              <MenuItem value={2}>from next month</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Job Location"
+              variant="outlined"
+              className="box"
+              value={signupDetails.jobLocation}
+              onChange={(event) => {
+                handleInput("jobLocation", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Availability"
+              variant="outlined"
+              className="box"
+              value={signupDetails.availability}
+              onChange={(event) => {
+                handleInput("availability", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="within 10 days">within 10 days</MenuItem>
+              <MenuItem value="within 20 days">within 20 days</MenuItem>
+              <MenuItem value="from next month">from next month</MenuItem>
+              <MenuItem value={0}>fresher</MenuItem>
+              <MenuItem value={1}>1-5 yrs</MenuItem>
+              <MenuItem value={2}>5-10 yrs</MenuItem>
+              <MenuItem value={3}>10-15 yrs</MenuItem>
+              <MenuItem value={4}>over 15 yrs</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              select
+              label="Education Qualification"
+              variant="outlined"
+              className="box"
+              value={signupDetails.educationQualification}
+              onChange={(event) => {
+                handleInput("educationQualification", event.target.value);
+              }}
+              fullWidth
+            >
+              <MenuItem value="below matriculation">below matriculation</MenuItem>
+              <MenuItem value="matriculation">matriculation</MenuItem>
+              <MenuItem value="higher secondary">higher secondary</MenuItem>
+              <MenuItem value="graduate">graduate</MenuItem>
+              <MenuItem value="post-graduate">post-graduate</MenuItem>
+            </TextField>
+          </Grid>
+          <Grid item>
+            <TextField
+              label="Preferred Salary"
+              variant="outlined"
+              className="box"
+              value={signupDetails.expectedSalary}
+              onChange={(event) => {
+                handleInput("expectedSalary", event.target.value);
+              }}
+              fullWidth
+            >
+            </TextField>
+          </Grid>
             </Grid>
             <Grid item>
               <TextField
@@ -572,7 +849,7 @@ const Signup = (props) => {
             }}
             className={classes.submitButton}
           >
-            Signup
+            <b>Signup</b>
           </Button>
         </Grid>
       </Grid>

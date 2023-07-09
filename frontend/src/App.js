@@ -7,6 +7,8 @@ import Welcome from "./Component/Welcome/Welcome";
 import MessagePopup from "./lib/MessagePopup";
 import Signup from "./Component/Signup/Signup";
 import Login from "./Component/Login/Login";
+import Profile_ami from "./Component/Profile/Profile_ami";
+import Profile_helper from "./Component/Profile/Profile_helper";
 
 export const SetPopupContext = createContext();
 
@@ -20,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "64px",
     boxSizing: "border-box",
     width: "100%",
+    backgroundColor: '#acfcb0',
   },
 }));
 
@@ -44,6 +47,9 @@ function App() {
           <Route exact path="/" Component={Welcome} />
           <Route exact path="/login" Component={Login} />
           <Route exact path="/signup" Component={Signup} />
+          {/* <Route exact  path="/" Component={Profile_ami}/> */}
+          {/* <Route exact path="/" Component={Profile_helper}/> */}
+          <Route />
         </Routes>
         </Grid>
         </Grid>
