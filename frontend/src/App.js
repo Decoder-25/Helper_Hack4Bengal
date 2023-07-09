@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Grid, makeStyles } from "@material-ui/core";
+
+import Navbar from "./Component/Navbar/Navbar";
+import Welcome from "./Component/Welcome/Welcome";
+
+const useStyles = makeStyles((theme) => ({
+  body: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "98vh",
+    paddingTop: "64px",
+    boxSizing: "border-box",
+    width: "100%",
+  },
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter >
+      {/* <SetPopupContext.Provider value={{ popup, setPopup }}> */}
+      <Grid container direction="column">
+        <Grid item xs>
+          <Navbar />
+        </Grid>
+        <Grid item className={classes.body}>
+        <Routes>
+          <Route exact path="/" Component={Welcome} />
+        </Routes>
+        </Grid>
+        </Grid>
+        
+      {/* </SetPopupContext.Provider> */}
+    </BrowserRouter>
+    </>
   );
 }
 
