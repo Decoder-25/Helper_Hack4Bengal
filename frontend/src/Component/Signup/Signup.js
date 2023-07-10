@@ -955,8 +955,9 @@ const Signup = () => {
 
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("type", response.data.userType);
+        const { token, type } = data;
+        localStorage.setItem("token", token);
+        localStorage.setItem("type", type);
         console.log("User registered successfully:", data);
       } else {
         const errorData = await response.json();
