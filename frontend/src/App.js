@@ -9,7 +9,7 @@ import Login from "./Component/Login/Login";
 import Profile_ami from "./Component/Profile/Profile_ami";
 import Profile_helper from "./Component/Profile/Profile_helper";
 import Logout from "./Component/Logout/Logout";
-import { userType } from "../../lib/isAuth";
+import { userType } from "../src/lib/isAuth";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   return (
-    <>
       <BrowserRouter >
       <Grid container direction="column">
         <Grid item xs>
@@ -42,15 +41,13 @@ function App() {
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/logout" Component={Logout} />
           <Route exact path="/profile" 
-            {userType() ==="recruiter" ? (<Profile_ami />) : <Profile_helper />}
-          />
-
+            {userType() ==="recruiter" ? (<Profile_ami />) : <Profile_helper />}>
+          </Route>
           <Route >  <ErrorPage /></Route>
         </Routes>
         </Grid>
         </Grid>
     </BrowserRouter>
-    </>
   );
 }
 

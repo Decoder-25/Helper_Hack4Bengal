@@ -1,6 +1,34 @@
 import Helper from "../models/helperModel.js";
 import Recruiter from "../models/recruiterModel.js";
 
+export const getRecruiterProfileController = async (req, res, next) => {
+  try {
+    const recruiter = await Recruiter.findOne({ userId: req.user.userId });
+
+    if (!recruiter) {
+      return res.status(404).json({ message: "Recruiter not found" });
+    }
+
+    res.json({ user: recruiter });
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const getHelperProfileController = async (req, res, next) => {
+  try {
+    const helper = await Helper.findOne({ userId: req.user.userId });
+
+    if (!helper) {
+      return res.status(404).json({ message: "Helper not found" });
+    }
+
+    res.json({ user: helper });
+  } catch (error) {
+    next(error);
+  }
+};
+
 export const updateRecruiterController = async (req, res, next) => {
   try {
     const { firstName, lastName, contactNumber, bio } = req.body;

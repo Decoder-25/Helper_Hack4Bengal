@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import {
   Button,
   Grid,
@@ -9,8 +9,6 @@ import {
   TextField,
 } from "@material-ui/core";
 import axios from "axios";
-
-import apiList from "../../lib/apiList";
 
 const useStyles = makeStyles((theme) => ({
   body: {
@@ -23,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
 }));
-
 
 const Profile_helper = (props) => {
   const classes = useStyles();
@@ -63,7 +60,7 @@ const Profile_helper = (props) => {
 
   const getData = () => {
     axios
-      .get(apiList.user, {
+      .get("/api/v1/user/helpers/profile", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -92,7 +89,7 @@ const Profile_helper = (props) => {
     };
 
     axios
-      .put(apiList.user, updatedDetails, {
+      .put("/api/v1/user/helpers/update", updatedDetails, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -105,6 +102,7 @@ const Profile_helper = (props) => {
       });
     setOpen(false);
   };
+
 
   return (
     <>
@@ -134,7 +132,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="First Name"
                   value={profileDetails.firstName}
-                  onChange={(event) => handleInput("firstname", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("firstname", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -144,7 +144,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Last Name"
                   value={profileDetails.lastName}
-                  onChange={(event) => handleInput("lastName", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("lastName", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -154,7 +156,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Aadhar Number"
                   value={profileDetails.AadharNumber}
-                  onChange={(event) => handleInput("AadharNumber", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("AadharNumber", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -174,7 +178,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Gender"
                   value={profileDetails.Gender}
-                  onChange={(event) => handleInput("Gender", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("Gender", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -184,7 +190,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Mobile No"
                   value={profileDetails.MobileNo}
-                  onChange={(event) => handleInput("MobileNo", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("MobileNo", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -194,7 +202,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Religion"
                   value={profileDetails.Religion}
-                  onChange={(event) => handleInput("Religion", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("Religion", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -204,7 +214,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Nationality"
                   value={profileDetails.Nationality}
-                  onChange={(event) => handleInput("Nationality", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("Nationality", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -214,7 +226,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Address"
                   value={profileDetails.Address}
-                  onChange={(event) => handleInput("Address", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("Address", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -224,7 +238,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Disability"
                   value={profileDetails.Disability}
-                  onChange={(event) => handleInput("Disability", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("Disability", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -234,7 +250,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Marital Status"
                   value={profileDetails.MaritalStatus}
-                  onChange={(event) => handleInput("MaritalStatus", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("MaritalStatus", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -244,7 +262,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Job Sector"
                   value={profileDetails.jobSector}
-                  onChange={(event) => handleInput("jobSector", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("jobSector", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -254,7 +274,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Job Experience"
                   value={profileDetails.jobExperience}
-                  onChange={(event) => handleInput("jobExperience", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("jobExperience", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -264,7 +286,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Job Location"
                   value={profileDetails.jobLocation}
-                  onChange={(event) => handleInput("jobLocation", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("jobLocation", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -274,7 +298,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Availability"
                   value={profileDetails.availability}
-                  onChange={(event) => handleInput("availability", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("availability", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -284,7 +310,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Education Qualification"
                   value={profileDetails.educationQualification}
-                  onChange={(event) => handleInput("educationQualification", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("educationQualification", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -294,7 +322,9 @@ const Profile_helper = (props) => {
                 <TextField
                   label="Preferred Salary"
                   value={profileDetails.expectedSalary}
-                  onChange={(event) => handleInput("expectedSalary", event.target.value)}
+                  onChange={(event) =>
+                    handleInput("expectedSalary", event.target.value)
+                  }
                   className={classes.inputBox}
                   variant="outlined"
                   fullWidth
@@ -312,9 +342,11 @@ const Profile_helper = (props) => {
           </Paper>
         </Grid>
       </Grid>
-      <Modal open={open} onClose={handleClose} className={classes.popupDialog}>
-
-      </Modal>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        className={classes.popupDialog}
+      ></Modal>
     </>
   );
 };
