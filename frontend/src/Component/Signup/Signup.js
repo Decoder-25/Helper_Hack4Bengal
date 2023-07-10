@@ -910,7 +910,7 @@ const Signup = () => {
   const [Address, setAddress] = useState("")
   const [Disability, setDisability] = useState("no");
   const [MaritalStatus, setMaritalStatus] = useState("unmarried")
-  const [jobSector, setJobSector] = useState("houseHelp")
+  const [jobSector, setJobSector] = useState("househelp")
   const [jobExperience, setJobExperience] = useState("fresher")
   const [jobLocation, setJobLocation] = useState("kolkata")
   const [availability, setAvailability] = useState("within 10 days")
@@ -1050,26 +1050,26 @@ const Signup = () => {
           <div>
           <label>Job Sector:</label>
             <select value={jobSector} onChange={(e) => setJobSector(e.target.value)}>
-            <option value="houseHelp">House Help</option>
-            <option value="driver">Driver</option>
-            <option value="gardener">Gardener</option>
-            <option value="cook">Cook</option>
-            <option value="nightGuard">NightGuard</option>
-            <option value="babbySitter">Baby Sitter</option>
-            <option value="careTaker">Care Taker</option>
-            <option value="petCarer">PetCarer</option>
-            <option value="homeTutor">Home Tutor</option>
-            <option value="houseKeeper">House Keeper</option>
+            <option value="househelp">househelp</option>
+            <option value="driver">driver</option>
+            <option value="gardener">gardener</option>
+            <option value="cook">cook</option>
+            <option value="nightGuard">nightguard</option>
+            <option value="babbySitter">babysitter</option>
+            <option value="careTaker">caretaker</option>
+            <option value="petCarer">petcarer</option>
+            <option value="homeTutor">hometutor</option>
+            <option value="houseKeeper">housekeeper</option>
             </select>
           </div>
           <div>
           <label>Job Experience:</label>
           <select value={jobExperience} onChange={(e) => setJobExperience(e.target.value)}>
-            <option value="fresher">Fresher</option>
+            <option value="fresher">fresher</option>
             <option value="1-5yrs">1-5 yrs</option>
             <option value="6-10yrs">6-10 yrs</option>
             <option value="11-15yrs">11-15 yrs</option>
-            <option value="over15yrs">Over 15 yrs</option>
+            <option value="over15yrs">over 15 yrs</option>
             </select>
           </div>
           <div>
@@ -1081,7 +1081,7 @@ const Signup = () => {
             <select value={availability} onChange={(e) => setAvailability(e.target.value)}>
             <option value="within10days">within 10 days</option>
             <option value="with20days">within 20 days</option>
-            <option value="fromNextMonth">From next month</option>
+            <option value="fromNextMonth">from next month</option>
             </select>
           </div>
           <div>
@@ -1089,9 +1089,9 @@ const Signup = () => {
           <select value={educationQualification} onChange={(e) => setEducationQualification(e.target.value)}>
             <option value="belowMatriculation">below matriculation</option>
             <option value="matriculation">matriculation</option>
-            <option value="higherSecondary">higher Secondary</option>
+            <option value="higherSecondary">higher secondary</option>
             <option value="graduate">graduate</option>
-            <option value="post-graduate">Post Graduate</option>
+            <option value="post-graduate">post-graduate</option>
             </select>
           </div>
           <div>
