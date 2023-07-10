@@ -930,6 +930,7 @@ const Signup = () => {
         body: JSON.stringify({
           email,
           password,
+          type: userType.toLowerCase(),
           firstName,
           lastName,
           contactNumber,
