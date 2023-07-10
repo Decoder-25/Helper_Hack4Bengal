@@ -1,3 +1,45 @@
-.box{
+/* .box{
     width: 400px;
+} */
+h1{
+    padding-left: 200px;
+}
+.signup{
+    border: 3px;
+    margin: 55px auto;
+    border-radius: 25px;
+    width: 42%;
+    padding:-top 40px;
+    padding-bottom: 40px;
+    padding-left: 55px;
+    background-color: #fff;
+}
+.signup1{
+    margin: 20px 0;
+}
+button{
+    width: 40%;
+    background-color: rgb(2, 54, 2);
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    /* display: grid;
+    justify-content: center;
+    margin: auto; */
+    margin-left: 130px;
+    margin-top: 38px;
+
+}
+button:hover{
+    background-color: #b4fca4;
+    color: black;
+}
+label{
+    width: 80px;
+    display: inline-block;
+}
+input,select,textarea{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 370px;
 }

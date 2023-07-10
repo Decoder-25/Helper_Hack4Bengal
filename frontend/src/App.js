@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "64px",
     boxSizing: "border-box",
     width: "100%",
+    backgroundColor: "#b4fca4",
   },
 }));
 
@@ -40,7 +41,7 @@ function App(
       <SetPopupContext.Provider value={{ popup, setPopup }}>
       <Grid container direction="column">
         <Grid item xs>
-          {/* <Navbar /> */}
+          <Navbar />
         </Grid>
         <Grid item className={classes.body}>
         <Routes>

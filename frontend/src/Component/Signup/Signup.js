@@ -13,7 +13,7 @@
 // import { Navigate } from "react-router-dom";
 // import PhoneInput from "react-phone-input-2";
 // import "react-phone-input-2/lib/material.css";
-// import "./Signup.css"
+import "./Signup.css"
 
 // import PasswordInput from "../../lib/PasswordInput";
 // import EmailInput from "../../lib/EmailInput";
@@ -972,27 +972,27 @@ const Signup = () => {
 
   return (
     <>
-    <div>
+    <div className= 'signup'>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>First Name:</label>
+        <div className= 'signup1'>
+          <label>First Name: </label>
           <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </div>
-        <div>
-          <label>Last Name:</label>
+        <div className= 'signup1'>
+          <label>Last Name: </label>
           <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
-        <div>
-          <label>Email:</label>
+        <div className="signup1">
+          <label>E-mail: </label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div>
-          <label>Password:</label>
+        <div className="signup1">
+          <label>Password: </label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <div>
-          <label>User Type:</label>
+        <div className="signup1">
+          <label>User Type: </label>
           <select value={userType} onChange={(e) => setUserType(e.target.value)}>
             <option value="helper">Helper</option>
             <option value="recruiter">Recruiter</option>
@@ -1001,54 +1001,54 @@ const Signup = () => {
         
         {userType === "helper" && (
           <>
-          <div>
-          <label>Adhaar Number:</label>
+          <div className="signup1">
+          <label>Adhaar Number: </label>
           <input type="text" value={AadharNumber} onChange={(e) => setAadharNumber(e.target.value)} />
           </div>
-          <div>
-          <label>Age:</label>
+          <div className="signup1">
+          <label>Age: </label>
           <input type="text" value={age} onChange={(e) => setAge(e.target.value)} />
           </div>
-          <div>
-            <label>Gender:</label>
+          <div className="signup1">
+            <label>Gender: </label>
             <select value={Gender} onChange={(e) => setGender(e.target.value)}>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
             </select>
           </div>
-          <div>
-          <label>Mobile no:</label>
+          <div className="signup1">
+          <label>Mobile no: </label>
           <input type="text" value={MobileNo} onChange={(e) => setMobileNo(e.target.value)} />
           </div>
-          <div>
-          <label>Religion:</label>
+          <div className="signup1">
+          <label>Religion: </label>
           <input type="text" value={Religion} onChange={(e) => setReligion(e.target.value)} />
           </div>
-          <div>
-            <label>Nationality:</label>
+          <div className="signup1">
+            <label>Nationality: </label>
             <input type="text" value={Nationality} onChange={(e) => setNationality(e.target.value)} />
           </div>
-          <div>
-          <label>Address:</label>
+          <div className="signup1">
+          <label>Address: </label>
           <input type="text" value={Address} onChange={(e) => setAddress(e.target.value)} />
           </div>
-          <div>
+          <div className="signup1">
           <label>Disability:</label>
             <select value={Disability} onChange={(e) => setDisability(e.target.value)}>
             <option value="yes">Yes</option>
             <option value="no">No</option>
             </select>
           </div>
-          <div>
-            <label>Marital Status:</label>
+          <div className="signup1">
+            <label>Marital Status: </label>
             <select value={MaritalStatus} onChange={(e) => setMaritalStatus(e.target.value)}>
             <option value="married">Married</option>
             <option value="unmarried">Unmarried</option>
             </select>
           </div>
-          <div>
-          <label>Job Sector:</label>
+          <div className="signup1">
+          <label>Job Sector: </label>
             <select value={jobSector} onChange={(e) => setJobSector(e.target.value)}>
             <option value="househelp">househelp</option>
             <option value="driver">driver</option>
@@ -1062,8 +1062,8 @@ const Signup = () => {
             <option value="houseKeeper">housekeeper</option>
             </select>
           </div>
-          <div>
-          <label>Job Experience:</label>
+          <div className="signup1">
+          <label>Job Experience: </label>
           <select value={jobExperience} onChange={(e) => setJobExperience(e.target.value)}>
             <option value="fresher">fresher</option>
             <option value="1-5yrs">1-5 yrs</option>
@@ -1072,20 +1072,20 @@ const Signup = () => {
             <option value="over15yrs">over 15 yrs</option>
             </select>
           </div>
-          <div>
-          <label>Job Location:</label>
+          <div className="signup1">
+          <label>Job Location: </label>
           <input type="text" value={jobLocation} onChange={(e) => setJobLocation(e.target.value)} />
           </div>
-          <div>
-            <label>Availability:</label>
+          <div className="signup1">
+            <label>Availability: </label>
             <select value={availability} onChange={(e) => setAvailability(e.target.value)}>
             <option value="within10days">within 10 days</option>
             <option value="with20days">within 20 days</option>
             <option value="fromNextMonth">from next month</option>
             </select>
           </div>
-          <div>
-          <label>Education Qualification:</label>
+          <div className="signup1">
+          <label>Education Qualification: </label>
           <select value={educationQualification} onChange={(e) => setEducationQualification(e.target.value)}>
             <option value="belowMatriculation">below matriculation</option>
             <option value="matriculation">matriculation</option>
@@ -1094,25 +1094,25 @@ const Signup = () => {
             <option value="post-graduate">post-graduate</option>
             </select>
           </div>
-          <div>
-          <label>Preferred Salary:</label>
+          <div className="signup1">
+          <label>Preferred Salary: </label>
           <input type="text" value={expectedSalary} onChange={(e) => setExpectedSalary(e.target.value)} />
           </div>
           </>
         )}
         {userType === "recruiter" && (
           <>
-          <div>
-            <label>Bio:</label>
+          <div className="signup1">
+            <label>Bio: </label>
             <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
           </div>
-          <div>
-          <label>Contact Number:</label>
+          <div className="signup1">
+          <label>Contact Number: </label>
           <input type="text" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} />
           </div>
           </>
         )}
-        <button type="submit">Sign up</button>
+        <button type="submit"><b>Sign up</b></button>
       </form>
     </div>
     </>
