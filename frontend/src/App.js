@@ -10,6 +10,7 @@ import Profile_ami from "./Component/Profile/Profile_ami";
 import Profile_helper from "./Component/Profile/Profile_helper";
 import Logout from "./Component/Logout/Logout";
 import { userType } from "../src/lib/isAuth";
+import JobPage from "./Component/job_page/jobPage";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,28 +33,17 @@ function App() {
       <BrowserRouter >
       <Grid container direction="column">
         <Grid item xs>
-          <Navbar />
+          {/* <Navbar /> */}
         </Grid>
         <Grid item className={classes.body}>
         <Routes>
-          <Route exact path="/" Component={Welcome} />
+          {/* <Route exact path="/" Component={Welcome} />
           <Route exact path="/login" Component={Login} />
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/logout" Component={Logout} />
-          {/* <Route exact path="/profile">
-            {userType() === "recruiter" ? (
-              <Profile_ami />
-            ) : (
-              <Profile_helper />
-            )}
-          </Route> */}
-          <Route exact path="recruiter" Component={Profile_ami}/>
-          <Route exact path="helper" Component={Profile_helper} />
-          {/* <Route >  <ErrorPage /></Route> */}
-          {/* <Route exact path="/profile" 
-            {userType() ==="recruiter" ? (<Profile_ami />) : (<Profile_helper />)}>
-          </Route>
-          <Route >  <ErrorPage /></Route> */}
+          <Route exact path="/recruiter" Component={Profile_ami}/>
+          <Route exact path="/helper" Component={Profile_helper} /> */}
+          <Route exact path="/jobbars" Component={JobPage}/>
         </Routes>
         </Grid>
         </Grid>

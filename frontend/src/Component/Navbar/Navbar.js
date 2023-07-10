@@ -43,9 +43,6 @@ import isAuth, {userType} from "../../lib/isAuth";
           {isAuth() ? (
             userType() === "helper" ? (
               <>
-                <Button color="inherit" onClick={() => handleClick("/")}>
-                  Application
-                </Button>
                 <Button color="inherit" onClick={() => handleClick("/helper")}>
                   Profile
                 </Button>
@@ -59,7 +56,7 @@ import isAuth, {userType} from "../../lib/isAuth";
                   My Jobs
                 </Button>
                 <Button color="inherit" onClick={() => handleClick("/recruiter")}>
-                  Profile_ami
+                  Profile
                 </Button>
                 <Button color="inherit" onClick={() => handleClick("/logout")}>
                   Logout
