@@ -52,7 +52,7 @@ const Profile_ami = (props) => {
 
   const getData = () => {
     axios
-      .get(apiList.user, {
+      .get("/api/v1/user/recruiters/profile", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -84,7 +84,7 @@ const Profile_ami = (props) => {
     }
 
     axios
-      .put(apiList.user, updatedDetails, {
+      .put("api/v1/user/recruiters/update", updatedDetails, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
