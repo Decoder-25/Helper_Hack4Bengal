@@ -1,0 +1,37 @@
+.login{
+    border: 3px;
+    margin: 55px auto;
+    border-radius: 25px;
+    width: 46%;
+    padding:-top 50px;
+    padding-bottom: 50px;
+    padding-left: 55px;
+    background-color: #fff;
+}
+.lo{
+    padding-left: 200px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: rgb(2, 54, 2);
+    
+}
+.login1{
+    margin: 20px 0;
+    align-items: center;
+}
+/* /* .btn1{
+    width: 40%;
+    background-color: rgb(2, 54, 2);
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    /* display: grid;
+    justify-content: center;
+    margin: auto; */
+    /* margin-left: 130px;
+    margin-top: 38px; */
+
+/* } 
+.btn1:hover{
+    background-color: #b4fca4;
+    color: black;
+}  */

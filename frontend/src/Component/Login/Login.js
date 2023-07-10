@@ -3,6 +3,8 @@ import { Navigate } from "react-router-dom";
 
 import isAuth from "../../lib/isAuth";
 
+import "./login.css"
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,10 +47,10 @@ const Login = () => {
   return loggedin ? (
     <Navigate to="/" />
   ) : (
-    <div>
-      <h1>Login</h1>
+    <div className='login'>
+      <h1 className="lo">Login</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="login1">
           <label>Email:</label>
           <input
             type="email"
@@ -56,7 +58,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div>
+        <div className="login1">
           <label>Password:</label>
           <input
             type="password"
@@ -64,7 +66,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Log in</button>
+        <button className="btn" type="submit">Log in</button>
       </form>
     </div>
   );

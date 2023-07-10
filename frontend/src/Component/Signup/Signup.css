@@ -1,16 +1,18 @@
 /* .box{
     width: 400px;
 } */
-h1{
+.su{
     padding-left: 200px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: rgb(2, 54, 2);;
 }
 .signup{
     border: 3px;
     margin: 55px auto;
     border-radius: 25px;
-    width: 42%;
-    padding:-top 40px;
-    padding-bottom: 40px;
+    width: 46%;
+    padding:-top 50px;
+    padding-bottom: 50px;
     padding-left: 55px;
     background-color: #fff;
 }
@@ -18,7 +20,7 @@ h1{
     margin: 20px 0;
     align-items: center;
 }
-button{
+.btn{
     width: 40%;
     background-color: rgb(2, 54, 2);
     color: white;
@@ -31,7 +33,7 @@ button{
     margin-top: 38px;
 
 }
-button:hover{
+.btn:hover{
     background-color: #b4fca4;
     color: black;
 }
