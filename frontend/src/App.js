@@ -50,10 +50,10 @@ function App() {
           <Route exact path="recruiter" Component={Profile_ami}/>
           <Route exact path="helper" Component={Profile_helper} />
           {/* <Route >  <ErrorPage /></Route> */}
-          <Route exact path="/profile" 
+          {/* <Route exact path="/profile" 
             {userType() ==="recruiter" ? (<Profile_ami />) : (<Profile_helper />)}>
           </Route>
-          <Route >  <ErrorPage /></Route>
+          <Route >  <ErrorPage /></Route> */}
         </Routes>
         </Grid>
         </Grid>
