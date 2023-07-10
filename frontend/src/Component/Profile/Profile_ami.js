@@ -12,7 +12,6 @@ import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/material.css";
 
-import { SetPopupContext } from "../../App";
 
 import apiList from "../../lib/apiList";
 
@@ -31,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Profile_ami = (props) => {
   const classes = useStyles();
-  const setPopup = useContext(SetPopupContext);
-
   const [profileDetails, setProfileDetails] = useState({
     name: "",
     bio: "",
@@ -66,11 +63,6 @@ const Profile_ami = (props) => {
       })
       .catch((err) => {
         console.log(err.response.data);
-        setPopup({
-          open: true,
-          severity: "error",
-          message: "Error",
-        });
       });
   };
 
@@ -97,19 +89,9 @@ const Profile_ami = (props) => {
         },
       })
       .then((response) => {
-        setPopup({
-          open: true,
-          severity: "success",
-          message: response.data.message,
-        });
         getData();
       })
       .catch((err) => {
-        setPopup({
-          open: true,
-          severity: "error",
-          message: err.response.data.message,
-        });
         console.log(err.response);
       });
   };
