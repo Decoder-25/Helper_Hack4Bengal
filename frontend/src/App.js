@@ -3,12 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
 
 import Navbar from "./Component/Navbar/Navbar";
-import Welcome from "./Component/Welcome/Welcome";
+import Welcome, { ErrorPage } from "./Component/Welcome/Welcome";
 import Signup from "./Component/Signup/Signup";
 import Login from "./Component/Login/Login";
 import Profile_ami from "./Component/Profile/Profile_ami";
 import Profile_helper from "./Component/Profile/Profile_helper";
 import Logout from "./Component/Logout/Logout";
+import { userType } from "../../lib/isAuth";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,9 +41,11 @@ function App() {
           <Route exact path="/login" Component={Login} />
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/logout" Component={Logout} />
-          <Route exact  path="/profile_ami" Component={Profile_ami}/>
-          <Route exact path="/profile_helper" Component={Profile_helper}/>
-          <Route />
+          <Route exact path="/profile" 
+            {userType() ==="recruiter" ? (<Profile_ami />) : <Profile_helper />}
+          />
+
+          <Route >  <ErrorPage /></Route>
         </Routes>
         </Grid>
         </Grid>

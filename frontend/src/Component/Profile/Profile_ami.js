@@ -31,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
 const Profile_ami = (props) => {
   const classes = useStyles();
   const [profileDetails, setProfileDetails] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     bio: "",
     contactNumber: "",
   });
