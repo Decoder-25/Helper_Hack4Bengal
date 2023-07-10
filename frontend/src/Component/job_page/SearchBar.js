@@ -5,8 +5,17 @@ function SearchBar() {
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = () => {
-    fetch(`http://localhost:8000/api/v1/helperProfilesStats/profileStat?jobSector=${searchQuery}`)
-      .then(response => response.json())
+    const apiUrl = 'http://localhost:8000/api/v1/helperProfilesStats/profileStat';
+    const searchUrl = new URL(apiUrl);
+    searchUrl.searchParams.append('jobSector', searchQuery);
+  
+    fetch(searchUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         setSearchResults(data);
       })
@@ -14,6 +23,8 @@ function SearchBar() {
         console.error('Error:', error);
       });
   };
+  
+
 
   return (
     <div>
