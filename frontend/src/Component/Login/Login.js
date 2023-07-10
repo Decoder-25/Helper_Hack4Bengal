@@ -220,9 +220,11 @@ const Login = () => {
         console.log("Logged in successfully:", data);
       } else {
         const errorData = await response.json();
+        window.alert("Login Error")
         console.log("Login error:", errorData);
       }
     } catch (error) {
+        window.alert("Login Error")
       console.log("Login error:", error);
     }
   };

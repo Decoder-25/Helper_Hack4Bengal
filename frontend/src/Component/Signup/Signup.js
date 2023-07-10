@@ -891,6 +891,7 @@
 // //         </Grid> */}
 
 import React, { useState } from "react";
+import isAuth from "../../lib/isAuth";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -953,6 +954,8 @@ const Signup = () => {
 
       if (response.ok) {
         const data = await response.json();
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("type", response.data.type);
         console.log("User registered successfully:", data);
       } else {
         const errorData = await response.json();
