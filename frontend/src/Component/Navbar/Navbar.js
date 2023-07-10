@@ -52,7 +52,7 @@ import isAuth, {userType} from "../../lib/isAuth";
               </>
             ) : (
               <>
-                <Button color="inherit" onClick={() => handleClick("/myjobs")}>
+                <Button color="inherit" onClick={() => handleClick("/jobbars")}>
                   My Jobs
                 </Button>
                 <Button color="inherit" onClick={() => handleClick("/recruiter")}>
