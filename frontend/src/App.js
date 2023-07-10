@@ -33,16 +33,16 @@ function App() {
       <BrowserRouter >
       <Grid container direction="column">
         <Grid item xs>
-          {/* <Navbar /> */}
+          <Navbar />
         </Grid>
         <Grid item className={classes.body}>
         <Routes>
-          {/* <Route exact path="/" Component={Welcome} />
+          <Route exact path="/" Component={Welcome} />
           <Route exact path="/login" Component={Login} />
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/logout" Component={Logout} />
           <Route exact path="/recruiter" Component={Profile_ami}/>
-          <Route exact path="/helper" Component={Profile_helper} /> */}
+          <Route exact path="/helper" Component={Profile_helper} />
           <Route exact path="/jobbars" Component={JobPage}/>
         </Routes>
         </Grid>
