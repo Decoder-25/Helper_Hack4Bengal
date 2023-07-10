@@ -45,8 +45,8 @@ function App(
         <Grid item className={classes.body}>
         <Routes>
           {/* <Route exact path="/" Component={Welcome} /> */}
-          {/* <Route exact path="/login" Component={Login} /> */}
-          <Route exact path="/" Component={Signup} />
+          <Route exact path="/" Component={Login} />
+          {/* <Route exact path="/" Component={Signup} /> */}
           {/* <Route exact  path="/" Component={Profile_ami}/> */}
           {/* <Route exact path="/" Component={Profile_helper}/> */}
           <Route />

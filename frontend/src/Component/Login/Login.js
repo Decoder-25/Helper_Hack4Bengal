@@ -217,6 +217,9 @@ const Login = () => {
 
       if (response.ok) {
         const data = await response.json();
+        const { token, type } = data;
+        localStorage.setItem("token", token);
+        localStorage.setItem("type", type);
         console.log("Logged in successfully:", data);
       } else {
         const errorData = await response.json();
