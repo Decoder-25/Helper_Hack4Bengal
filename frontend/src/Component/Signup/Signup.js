@@ -903,13 +903,13 @@ const Signup = () => {
   const [bio, setBio] = useState("")
   const [AadharNumber, setAadharNumber] = useState("");
   const [age, setAge] = useState("")
-  const [gender, setGender] = useState("male")
+  const [Gender, setGender] = useState("male")
   const [MobileNo, setMobileNo] = useState("")
-  const [religion, setReligion] = useState("")
-  const [nationality, setNationality] = useState("")
-  const [address, setAddress] = useState("")
-  const [disability, setDisability] = useState("no");
-  const [maritalStatus, setMaritalStatus] = useState("unmarried")
+  const [Religion, setReligion] = useState("")
+  const [Nationality, setNationality] = useState("")
+  const [Address, setAddress] = useState("")
+  const [Disability, setDisability] = useState("no");
+  const [MaritalStatus, setMaritalStatus] = useState("unmarried")
   const [jobSector, setJobSector] = useState("houseHelp")
   const [jobExperience, setJobExperience] = useState("fresher")
   const [jobLocation, setJobLocation] = useState("kolkata")
@@ -937,13 +937,13 @@ const Signup = () => {
           bio,
           AadharNumber,
           age,
-          gender,
+          Gender,
           MobileNo,
-          religion,
-          nationality,
-          address,
-          disability,
-          maritalStatus,
+          Religion,
+          Nationality,
+          Address,
+          Disability,
+          MaritalStatus,
           jobSector,
           jobExperience,
           jobLocation,
@@ -1010,7 +1010,7 @@ const Signup = () => {
           </div>
           <div>
             <label>Gender:</label>
-            <select value={gender} onChange={(e) => setGender(e.target.value)}>
+            <select value={Gender} onChange={(e) => setGender(e.target.value)}>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
@@ -1022,26 +1022,26 @@ const Signup = () => {
           </div>
           <div>
           <label>Religion:</label>
-          <input type="text" value={religion} onChange={(e) => setReligion(e.target.value)} />
+          <input type="text" value={Religion} onChange={(e) => setReligion(e.target.value)} />
           </div>
           <div>
             <label>Nationality:</label>
-            <input type="text" value={nationality} onChange={(e) => setNationality(e.target.value)} />
+            <input type="text" value={Nationality} onChange={(e) => setNationality(e.target.value)} />
           </div>
           <div>
           <label>Address:</label>
-          <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+          <input type="text" value={Address} onChange={(e) => setAddress(e.target.value)} />
           </div>
           <div>
           <label>Disability:</label>
-            <select value={disability} onChange={(e) => setDisability(e.target.value)}>
+            <select value={Disability} onChange={(e) => setDisability(e.target.value)}>
             <option value="yes">Yes</option>
             <option value="no">No</option>
             </select>
           </div>
           <div>
             <label>Marital Status:</label>
-            <select value={maritalStatus} onChange={(e) => setMaritalStatus(e.target.value)}>
+            <select value={MaritalStatus} onChange={(e) => setMaritalStatus(e.target.value)}>
             <option value="married">Married</option>
             <option value="unmarried">Unmarried</option>
             </select>
@@ -1100,15 +1100,17 @@ const Signup = () => {
           </>
         )}
         {userType === "recruiter" && (
+          <>
           <div>
             <label>Bio:</label>
             <textarea value={bio} onChange={(e) => setBio(e.target.value)} />
           </div>
+          <div>
+          <label>Contact Number:</label>
+          <input type="text" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} />
+          </div>
+          </>
         )}
-        <div>
-            <label>Contact Number:</label>
-            <input type="text" value={contactNumber} onChange={(e) => setContactNumber(e.target.value)} />
-        </div>
         <button type="submit">Sign up</button>
       </form>
     </div>
