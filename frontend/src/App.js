@@ -41,7 +41,7 @@ function App() {
           <Route exact path="/signup" Component={Signup} />
           <Route exact path="/logout" Component={Logout} />
           <Route exact path="/profile" 
-            {userType() ==="recruiter" ? (<Profile_ami />) : <Profile_helper />}>
+            {userType() ==="recruiter" ? (<Profile_ami />) : (<Profile_helper />)}>
           </Route>
           <Route >  <ErrorPage /></Route>
         </Routes>
