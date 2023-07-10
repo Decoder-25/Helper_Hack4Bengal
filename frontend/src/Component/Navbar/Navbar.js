@@ -29,20 +29,27 @@ import {
     };
   
     return (
-      <AppBar position="fixed" style={{backgroundColor: 'rgb(2, 54, 2)' }}>
+      <AppBar position="fixed" style={{ backgroundColor: "rgb(2, 54, 2)" }}>
         <Toolbar>
-          <Typography variant="h5" className={classes.title} onClick={() => handleClick("/")}>
-          <b>HELPER</b>
+          <Typography
+            variant="h5"
+            className={classes.title}
+            onClick={() => handleClick("/")}
+          >
+            <b>HELPER</b>
           </Typography>
-          
-        <>
-          <Button color="inherit" onClick={() => handleClick("/login")}>
-          <b>Login</b>
-          </Button>
-          <Button color="inherit" onClick={() => handleClick("/signup")}>
-          <b>Signup</b>
-          </Button>
-        </>
+
+          <>
+            <Button color="inherit" onClick={() => handleClick("/login")}>
+              <b>Login</b>
+            </Button>
+            <Button color="inherit" onClick={() => handleClick("/signup")}>
+              <b>Signup</b>
+            </Button>
+            {/* <Button color="inherit" onClick={() => handleClick("/logout")}>
+              <b>Logout</b>
+            </Button> */}
+          </>
         </Toolbar>
       </AppBar>
     );

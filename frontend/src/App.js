@@ -9,6 +9,7 @@ import Signup from "./Component/Signup/Signup";
 import Login from "./Component/Login/Login";
 import Profile_ami from "./Component/Profile/Profile_ami";
 import Profile_helper from "./Component/Profile/Profile_helper";
+import Logout from "./Component/Logout/Logout";
 
 export const SetPopupContext = createContext();
 
@@ -40,13 +41,14 @@ function App(
       <SetPopupContext.Provider value={{ popup, setPopup }}>
       <Grid container direction="column">
         <Grid item xs>
-          {/* <Navbar /> */}
+          <Navbar />
         </Grid>
         <Grid item className={classes.body}>
         <Routes>
-          {/* <Route exact path="/" Component={Welcome} /> */}
-          <Route exact path="/" Component={Login} />
-          {/* <Route exact path="/" Component={Signup} /> */}
+          <Route exact path="/" Component={Welcome} />
+          <Route exact path="/login" Component={Login} />
+          <Route exact path="/signup" Component={Signup} />
+          <Route exact path="/logout" Component={Logout} />
           {/* <Route exact  path="/" Component={Profile_ami}/> */}
           {/* <Route exact path="/" Component={Profile_helper}/> */}
           <Route />
