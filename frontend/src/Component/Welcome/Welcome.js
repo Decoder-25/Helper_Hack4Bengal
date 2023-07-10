@@ -4,7 +4,7 @@ const Welcome = (props) => {
   return (
     <div className="flex-container">
       <div className="body">
-        <h1><b>Welcome to Job Portal</b></h1>
+        <h1 className="welcome"><b>Welcome to Job Portal</b></h1>
         <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequatur ad nihil aliquam placeat recusandae labore libero itaque ipsum quibusdam sunt? Veritatis dolores id, aut totam aperiam dolor sequi sunt.</b></p>
       </div>
       <div className="image">

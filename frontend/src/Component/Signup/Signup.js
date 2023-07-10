@@ -980,7 +980,7 @@ const Signup = () => {
   ) : (
     <>
     <div className= 'signup'>
-      <h1>Signup</h1>
+      <h1 className="su"><b>Signup</b></h1>
       <form onSubmit={handleSubmit}>
         <div className= 'signup1'>
           <label>First Name: </label>
@@ -1119,7 +1119,7 @@ const Signup = () => {
           </div>
           </>
         )}
-        <button type="submit"><b>Sign up</b></button>
+        <button className="btn" type="submit"><b>Sign up</b></button>
       </form>
     </div>
     </>
