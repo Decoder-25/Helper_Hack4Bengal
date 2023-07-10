@@ -16,6 +16,7 @@ h1{
 }
 .signup1{
     margin: 20px 0;
+    align-items: center;
 }
 button{
     width: 40%;
@@ -37,9 +38,15 @@ button:hover{
 label{
     width: 80px;
     display: inline-block;
+    
+}
+label,input{
+    font-family: 'Martian Mono', monospace;
+    font-size: 12px;
 }
 input,select,textarea{
     padding-top: 10px;
     padding-bottom: 10px;
     width: 370px;
+    margin-left: 50px;
 }
