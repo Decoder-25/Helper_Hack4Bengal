@@ -224,7 +224,7 @@ const Login = () => {
         console.log("Login error:", errorData);
       }
     } catch (error) {
-        window.alert("Login Error")
+        window.alert("Login Error catch")
       console.log("Login error:", error);
     }
   };
