@@ -6,6 +6,8 @@ import {
     makeStyles,
   } from "@material-ui/core";
   import { useNavigate } from "react-router-dom";
+
+import isAuth, {userType} from "../../lib/isAuth";
   
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,7 +40,33 @@ import {
           >
             <b>HELPER</b>
           </Typography>
-
+          {isAuth() ? (
+            userType() === "helper" ? (
+              <>
+                <Button color="inherit" onClick={() => handleClick("/")}>
+                  Application
+                </Button>
+                <Button color="inherit" onClick={() => handleClick("/profile")}>
+                  Profile
+                </Button>
+                <Button color="inherit" onClick={() => handleClick("/logout")}>
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button color="inherit" onClick={() => handleClick("/myjobs")}>
+                  My Jobs
+                </Button>
+                <Button color="inherit" onClick={() => handleClick("/profile")}>
+                  Profile_ami
+                </Button>
+                <Button color="inherit" onClick={() => handleClick("/logout")}>
+                  Logout
+                </Button>
+              </>
+            )
+          ) : (
           <>
             <Button color="inherit" onClick={() => handleClick("/login")}>
               <b>Login</b>
@@ -46,10 +74,8 @@ import {
             <Button color="inherit" onClick={() => handleClick("/signup")}>
               <b>Signup</b>
             </Button>
-            {/* <Button color="inherit" onClick={() => handleClick("/logout")}>
-              <b>Logout</b>
-            </Button> */}
           </>
+          )}
         </Toolbar>
       </AppBar>
     );
