@@ -24,6 +24,8 @@
 
 ## Contact
 
+Currently we're shifting this codebase to https://github.com/Decoder-25/Helper for some version issues and chnages and updates.
+
 For any inquiries or feedback, please reach out to us at:
 1. [bidisha2125@gmail.com](mailto:bidisha2125@gmail.com)
 2. [kheyalidhara15sh@gmail.com](mailto:kheyalidhara15sh@gmail.com)
